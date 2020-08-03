@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>A-level lesson_1</title>
+   <link rel="stylesheet" href="css/all.css">
+   <style>
+      h2 {
+         color: deepskyblue;
+      }
+
+      .header {
+         color: red;
+      }
+
+      .card {
+         background-color: yellow;
+      }
+
+      .card.card_g {
+         background-color: green;
+      }
+
+      #head {
+         color: cyan
+      }
+
+      a:hover {
+         color: red
+      }
+   </style>
+</head>
+
+<body>
+   <h2 class="header">3. Теги. Структура, типы тегов</h2>
+   <h2 id="head" style="color: pink">3. Теги. Структура, типы тегов</h2>
+   <h2>3. Теги. Структура, типы тегов</h2>
+   <hr>
+   <time datatime="2020-07-23">23 июля</time>
+   <hr>
+   <div class="card card_g">Card</div>
+   <div class="card">Card</div>
+   <div class="card">Card</div>
+   <div class="card">Card</div>
+   <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" title="eye" alt="some_image"
+      width="200">
+   <img src="img/baelen.jpg" alt="baelen" width="200" height="400" title="some">
+   <p> <b>Tag (тег)</b> — элемент языка разметки гипертекста.
+   </p>
+   <p><b>HTML тег</b> - структурная единица разметки HTML документа.</p>
+   <p>Код HTML складывается из "кирпичиков", которые именуются тегами.</p>
+   <p>Каждый тег имеет свою функцию, а изучение языка разметки HTML, в конечном счете, заключается именно в изучении
+      тегов и их свойств в документе. </p>
+
+   <nav>
+      <ul>
+         <li><a href="https://google.com">google</a></li>
+         <li><a href="#head">triger</a></li>
+         <li><a href="inner.html" target="_blank">inner</a></li>
+         <li>
+            <a href="#">link4</a>
+            <ol start="2">
+               <li><a href="#">&#9766;item1</a></li>
+               <li><a href="#">&#9766;item2</a></li>
+               <li><a href="#">&#9766;item3</a></li>
+               <li><a href="#">item4</a></li>
+               <li><a href="#">item5</a></li>
+            </ol>
+         </li>
+      </ul>
+   </nav>
+   <table border="1">
+      <tr>
+         <td colspan="2">Ячейка таблицы</td>
+         <td>Ячейка таблицы</td>
+
+      </tr>
+      <tr>
+         <td>Ячейка таблицы</td>
+         <td>Ячейка таблицы</td>
+         <td>Ячейка таблицы</td>
+      </tr>
+      <tr>
+         <td>Ячейка таблицы</td>
+         <td>Ячейка таблицы</td>
+         <td>Ячейка таблицы</td>
+      </tr>
+   </table>
+   <dl>
+      <dt>lorem</dt>
+      <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas molestiae quis officia tempore sint,
+         soluta, repellat nostrum blanditiis fugiat porro non dicta corrupti! Aut iusto tenetur ipsum cum inventore.
+      </dd>
+   </dl>
+
+   <input type="text" placeholder="Name">
+   <input type="text" placeholder="Surname">
+   <input type="text" placeholder="Secondname">
+
+   <input type="radio" name="name2">
+   <input type="radio" checked name="name2">
+   <input type="radio" checked name="name2">
+   <input type="checkbox" name="name4">
+
+</body>
+
+</html>
