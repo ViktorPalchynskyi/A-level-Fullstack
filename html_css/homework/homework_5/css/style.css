@@ -1,5 +1,5 @@
 .wrapper {
-   overflow: hidden;
+   overflow-x: hidden;
    width: 100%;
    height: 100%;
    display: flex;
@@ -7,7 +7,7 @@
 }
 
 #header {
-   flex: 0 0 auto;
+   flex: 0 1;
    background-color: #d4b90c;
    display: flex;
    justify-content: space-between;
@@ -36,7 +36,7 @@ nav {
 }
 
 #main {
-   flex: 1;
+   flex: 1 0;
 }
 
 .container {
@@ -47,11 +47,12 @@ nav {
 
 h1 {
    text-align: center;
+   text-transform: uppercase;
 }
 
 .article {
    flex: 1;
-   padding: 50px;
+   padding: 20px;
 }
 
 .aside1,
@@ -71,7 +72,109 @@ h1 {
 
 #footer {
    text-align: center;
-   flex: 0;
+   flex: 0 1;
    padding-top: 10px;
    background-color: #87ed87;
+}
+
+.box-card {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0;
+   margin: 0px -10px;
+}
+
+.box-card>li {
+   display: flex;
+   width: calc(100% / 3);
+   padding: 0px 10px;
+   margin-bottom: 20px;
+}
+
+.card {
+   border: 2px solid black;
+   border-radius: 8px;
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   align-items: center;
+   padding: 5% 10%;
+}
+
+.card__img {
+   border: 15px solid grey;
+   border-radius: 50%;
+   max-width: 150px;
+}
+
+.card__subtitle {
+   margin-top: 20px;
+}
+
+.card__text {
+   margin-top: 20px;
+   flex: 1;
+}
+
+.card__btn {
+   background-color: #a64dff;
+   color: #fff;
+   border: none;
+   border-radius: 16px;
+   padding: 5px 20px;
+   transition: all 0.3s;
+}
+
+.card__btn:hover {
+   background-color: orange;
+   transform: scale(1.2);
+}
+
+.holder {
+   margin: 0px auto;
+   width: 400px;
+   height: 100px;
+   display: flex;
+   border: 2px solid #000;
+   flex-wrap: wrap;
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
+   display: flex;
+   overflow: hidden;
+
+}
+
+.holder>div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: calc(100%/2);
+}
+
+.holder div:first-child {
+   order: 1;
+   background-color: tomato;
+}
+
+.holder div:nth-child(2) {
+   flex: 1;
+   order: 4;
+   background-color: deepskyblue;
+}
+
+.holder div:nth-child(3) {
+   flex: 1;
+   order: 3;
+   background-color: blueviolet;
+}
+
+.holder div:nth-child(4) {
+   flex: 1;
+   order: 5;
+   background-color: green;
+}
+
+.holder div:last-child {
+   order: 2;
+   background-color: orange;
 }
