@@ -1,0 +1,21 @@
+h1,
+h2 {
+   text-align: center;
+   margin: 20px auto;
+}
+
+form {
+   padding: 0 10px;
+}
+
+p {
+   margin: 0;
+   padding: 5px;
+   width: 25%;
+   display: flex;
+   justify-content: space-between;
+}
+
+button {
+   margin: 15px 0;
+}
