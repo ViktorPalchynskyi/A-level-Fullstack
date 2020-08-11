@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>A-level homework 9</title>
+   <script src="https://kit.fontawesome.com/3b2d7d7532.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,14 +16,27 @@
    </header>
    <main>
       <section>
-         <h2>Task 1</h2>
          <form action="#">
             <fieldset>
                <legend>Контактная информация</legend>
                <p><label for="name">Имя <em>*</em></label><input type="text" id="name"></p>
                <p><label for="email">E-mail</label><input type="email:" id="email"></p>
                <p><label for="phone">Телефон</label><input type="tel:" id="phone"></p>
-               <p><label for="countrie">Страны</label><select id="countrie"></select></p>
+               <p>
+                  <label for="countrie">Страны</label>
+                  <select id="countrie">
+                     <option>Украина</option>
+                     <option>Россия</option>
+                     <option>Белоруссия</option>
+                     <option>Казахстан</option>
+                  </select></p>
+               <textarea id="" cols="30" rows="10"></textarea>
+               <input type="checkbox" id="cb1">
+               <label for="cb1">Чекбокс 1</label>
+               <input type="checkbox" id="cb2">
+               <label for="cb2">Чекбокс 2</label>
+               <input type="checkbox" id="cb3">
+               <label for="cb3">Чекбокс 3</label>
             </fieldset>
             <button type="submit">Отправить</button>
          </form>
