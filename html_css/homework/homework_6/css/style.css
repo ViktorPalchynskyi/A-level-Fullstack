@@ -132,6 +132,7 @@ h1 {
 
 .aside1,
 .aside2 {
+   width: 100%;
    text-align: center;
    flex: 0 0 210px;
 }

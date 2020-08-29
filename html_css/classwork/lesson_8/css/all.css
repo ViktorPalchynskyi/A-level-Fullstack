@@ -1,0 +1,12 @@
+.bg-dark{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 44%, rgba(0,212,255,1) 83%)!important;
+}
+
+.container-fluid { 
+    max-width: 1000px;
+}
+
+.mb-5 { 
+    margin-bottom: 50px;
+}
