@@ -1,5 +1,5 @@
 const STORE_TYPE = 'COFFEE_SHOP';
-const storeName = 'Karoma Gava';
+const STORE_NAME = 'KAROMA_GAVA';
 
 var latteCost = 39.50;
 let latteSize = 0.3;
