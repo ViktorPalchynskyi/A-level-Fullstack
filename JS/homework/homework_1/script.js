@@ -1,4 +1,4 @@
-const storeType = 'COFFEE SHOP';
+const STORE_TYPE = 'COFFEE_SHOP';
 const storeName = 'Karoma Gava';
 
 var latteCost = 39.50;
@@ -52,5 +52,5 @@ let thirdClientOrderAfterDicount = (thirdClientOrder - thirdClientDicount).toFix
 
 
 console.log('Первый клиент заказал на сумму ' + fitstClientOrder + ' грн.');
-console.log('Первый клиент заказал на сумму ' + secondClientOrder + ' грн.' + ' с учетом скидки ' + secondClientOrderAfterDicount + ' грн.');
-console.log('Первый клиент заказал на сумму ' + thirdClientOrder + ' грн.' + ' с учетом скидки ' + thirdClientOrderAfterDicount + ' грн.');
+console.log('Второй клиент заказал на сумму ' + secondClientOrder + ' грн.' + ' с учетом скидки ' + secondClientOrderAfterDicount + ' грн.');
+console.log('Третий клиент заказал на сумму ' + thirdClientOrder + ' грн.' + ' с учетом скидки ' + thirdClientOrderAfterDicount + ' грн.');
