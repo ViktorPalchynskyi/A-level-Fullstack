@@ -5,10 +5,16 @@ var color = prompt("Введите цвет", "");
 if ((color === 'red' || color === 'black')) {
    document.write("<div style='background-color: red;'>красный</div>");
    document.write("<div style='background-color: black; color: white;'>черный</div>");
+} else if (color === 'black') {
+   document.write("<div style='background-color: black; color: white;'>черный</div>");
 } else if ((color === 'blue' || color === 'green')) {
    document.write("<div style='background-color: blue;'>синий</div>");
    document.write("<div style='background-color: green;'>зеленый</div>");
-} else {
+} else if (color === 'green') {
+   document.write("<div style='background-color: black; color: white;'>черный</div>");
+   document.write("<div style='background-color: green;'>зеленый</div>");
+}
+else {
    document.write("<div style='background-color: gray;'>Я не понял</div>");
 }
 
@@ -91,48 +97,48 @@ while (true) {
 const htmlToJson = {
    "tagName": "body",
    "subTags": [{
-         "tagName": "div",
-         "subTags": [{
-               "tagName": "span",
-               "text": "Enter a data please:"
-            },
-            {
-               "tagName": "br"
-            },
-            {
-               "tagName": "input",
-               "attrs": {
-                  "type": "text",
-                  "id": "name"
-               }
-            },
-            {
-               "tagName": "input",
-               "attrs": {
-                  "type": "text",
-                  "id": "surname"
-               }
-            }
-         ]
+      "tagName": "div",
+      "subTags": [{
+         "tagName": "span",
+         "text": "Enter a data please:"
       },
       {
-         "tagName": "div",
-         "subTags": [{
-               "tagName": "button",
-               "text": "OK",
-               "attrs": {
-                  "id": "ok"
-               }
-            },
-            {
-               "tagName": "button",
-               "text": "Cancel",
-               "attrs": {
-                  "id": "cancel"
-               }
-            }
-         ]
+         "tagName": "br"
+      },
+      {
+         "tagName": "input",
+         "attrs": {
+            "type": "text",
+            "id": "name"
+         }
+      },
+      {
+         "tagName": "input",
+         "attrs": {
+            "type": "text",
+            "id": "surname"
+         }
       }
+      ]
+   },
+   {
+      "tagName": "div",
+      "subTags": [{
+         "tagName": "button",
+         "text": "OK",
+         "attrs": {
+            "id": "ok"
+         }
+      },
+      {
+         "tagName": "button",
+         "text": "Cancel",
+         "attrs": {
+            "id": "cancel"
+         }
+      }
+      ]
+   }
    ]
 };
 
@@ -208,7 +214,7 @@ for (i; i >= 0; i++) {
       break;
    }
 }
-alert(`Number of intrations is ${i+1}`);
+alert(`Number of intrations is ${i + 1}`);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
