@@ -1,46 +1,51 @@
 //1
 
-// function isLink(link) {
-//    if (link !== ' ' && link.length >= 10) {
-//       return link;
-//    } else {
-//       return null;
-//    }
-// }
+function isLink(link) {
+   if (link !== ' ' && link.length >= 10) {
+      return link;
+   } else {
+      return null;
+   }
+}
 
-// function isNumber(number) {
-//    if (!isNaN(number)) {
-//       return number;
-//    } else {
-//       return null;
-//    }
-// }
+function isNumber(number) {
+   if (!isNaN(number)) {
+      return number;
+   } else {
+      return null;
+   }
+}
 
-// function createImage(link, angle) {
+function createImage(link, angle) {
 
-//    if (isLink(link) && isNumber(angle)) {
-//       let image = document.createElement('img');
-//       image.classList.add('myimg');
-//       image.setAttribute('src', link);
-//       image.setAttribute('alt', 'random image');
+   if (isLink(link) && isNumber(angle)) {
+      let image = document.createElement('img');
+      image.classList.add('myimg');
+      image.setAttribute('src', link);
+      image.setAttribute('alt', 'random image');
 
-//       image.style.transform = `rotate(${angle}deg)`;
+      image.style.transform = `rotate(${angle}deg)`;
 
-//       document.body.appendChild(image);
-//    }
-// }
+      document.body.appendChild(image);
+   }
+}
 
-// function start(numberOfImages) {
-//    for (let i = 0; i < numberOfImages; i++) {
-//       const questionImage = prompt('Дай ссылку!');
-//       const questionAngle = +prompt('На сколько градусов повернуть?');
+function start(numberOfImages) {
+   const questionImage = prompt('Дай ссылку!');
+   const questionAngle = +prompt('На сколько градусов повернуть?');
 
-//       createImage(questionImage, questionAngle);
-//    }
-// }
-// const numberOfImg = +prompt('Сколько картинок создать?');
+   let angleSum = 0;
 
-// start(numberOfImg);
+   for (let i = 0; i < numberOfImages; i++) {
+
+      angleSum += questionAngle;
+
+      createImage(questionImage, angleSum);
+   }
+}
+const numberOfImg = +prompt('Сколько картинок создать?');
+
+start(numberOfImg);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,3 +57,5 @@ function hasTag(tag) {
 }
 
 hasTag('div');
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
