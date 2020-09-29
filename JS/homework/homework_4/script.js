@@ -98,14 +98,15 @@ console.log(sort(persons, 'name'));
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //7
+const regExp1 = (/\s\s\s/g);
+const regExp2 = (/\s\s/g);
 
 const arr = [' hello darkness   my old   friend ', ' i\'ve come to   talk  with   you again    '];
 
-const newArr = arr.map((item) => {
-   console.log(item.trim());
-});
-
-
+for (let str of arr) {
+   const newArr = str.trim().replace(regExp1, ' ').replace(regExp2, ' ');
+   console.log(newArr);
+};
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
