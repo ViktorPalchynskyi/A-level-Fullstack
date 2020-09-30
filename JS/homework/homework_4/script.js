@@ -51,62 +51,120 @@
 
 //2 
 
-function hasTag(tag) {
-   const tagId = document.querySelector(tag);
-   return document.body.contains(tagId) ? tagId.remove() : alert('Тега нет на странице!');
-}
+// function hasTag(tag) {
+//    const tagId = document.querySelector(tag);
+//    return document.body.contains(tagId) ? tagId.remove() : alert('Тега нет на странице!');
+// }
 
-hasTag('div');
+// hasTag('div');
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//4
+//3/4
+
+let table = document.createElement('table');
+let tr;
+let td;
+
+for (let i = 1; i < 11; i++) {
+   tr = document.createElement('tr');
+   for (let j = 1; j < 11; j++) {
+      td = document.createElement('td');
+      td.style.border = "1px solid black";
+      td.innerText = `${i} * ${j} = ${i*j}`;
+      tr.appendChild(td);
+      console.log(td);
+   }
+   table.appendChild(tr);
+}
+document.body.appendChild(table);
+
+const tds = document.querySelectorAll('td');
+
+function addColor(elem, event, color) {
+   elem.forEach(item => {
+      item.addEventListener(event, () => {
+         item.style.backgroundColor = color;
+      });
+   });
+}
+
+addColor(tds, 'mouseover', 'tomato');
+addColor(tds, 'mouseout', 'white');
 
 
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//5
+
+// const number1 = document.querySelector('[name = "number1"]');
+// const number2 = document.querySelector('[name = "number2"]');
+
+// const res = document.querySelector('.result');
+// const btn = document.querySelector('.calc');
+
+// let sum;
+
+// function getValue(input) {
+//    return +(input.value);
+// }
+
+
+
+// btn.addEventListener('click', () => {
+//    if (isNumber(getValue(number1)) && (isNumber(getValue(number2)))) {
+//       sum = getValue(number1) + getValue(number2);
+//    } else {
+//       alert('Put a number please!');
+//    }
+//    res.innerText = `result = ${sum}`;
+// });
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //6
 
-var persons = [{
-   name: 'Vasyan',
-   age: 21
-}, {
-   name: 'Kolyan',
-   age: 22
-}, {
-   name: 'Mashka',
-   age: 17
-}];
+// var persons = [{
+//    name: 'Vasyan',
+//    age: 21
+// }, {
+//    name: 'Kolyan',
+//    age: 22
+// }, {
+//    name: 'Mashka',
+//    age: 17
+// }];
 
-function sort(obj, val) {
-   let sortedArr = [];
+// function sort(obj, val) {
+//    let sortedArr = [];
 
-   for (let item of obj) {
-      for (let key in item) {
-         if (key === val) {
-            sortedArr[sortedArr.length] = item[key];
-         }
-      }
-   }
+//    for (let item of obj) {
+//       for (let key in item) {
+//          if (key === val) {
+//             sortedArr[sortedArr.length] = item[key];
+//          }
+//       }
+//    }
 
-   return sortedArr;
-}
+//    return sortedArr;
+// }
 
-console.log(sort(persons, 'name'));
+// console.log(sort(persons, 'name'));
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //7
-const regExp1 = (/\s\s\s/g);
-const regExp2 = (/\s\s/g);
 
-const arr = [' hello darkness   my old   friend ', ' i\'ve come to   talk  with   you again    '];
+// const regExp1 = (/\s\s\s/g);
+// const regExp2 = (/\s\s/g);
 
-for (let str of arr) {
-   const newArr = str.trim().replace(regExp1, ' ').replace(regExp2, ' ');
-   console.log(newArr);
-};
+// const arr = [' hello darkness   my old   friend ', ' i\'ve come to   talk  with   you again    '];
+
+// for (let str of arr) {
+//    const newArr = str.trim().replace(regExp1, ' ').replace(regExp2, ' ');
+//    console.log(newArr);
+// }
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
