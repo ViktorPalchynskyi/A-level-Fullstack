@@ -1,0 +1,91 @@
+.darts { 
+   height: 500px;
+   width: 500px;
+   margin: 20px auto 30px auto;
+
+   border-radius: 100%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #000;
+}
+
+.green { 
+   height: 320px;
+   width: 320px;
+   background-color: green;
+   border: 1px solid #000;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.yellow { 
+   height: 160px;
+   width: 160px;
+   background-color: yellow;
+   border: 1px solid #000;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.blue{ 
+   height: 80px;
+   width: 80px;
+   background-color: deepskyblue;
+   border: 1px solid #000;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.red { 
+   height: 40px;
+   width: 40px;
+   background-color: tomato;
+   border: 1px solid #000;
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.score {
+   height: 100px;
+   width: 500px;
+   margin: 0 auto;
+   border: 2px solid #000;
+   justify-content: center;
+   align-items: center;
+   font-size: 40px;
+   color: #000;
+   display: none;
+}
+
+.score.active{ 
+   display: flex;
+}
+
+.output{ 
+   height: 100px;
+   width: 500px;
+   margin: 0 auto;
+   border: 2px solid #000;
+   border-radius : 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 40px;
+   color: #000;
+   background-color: tomato;
+   display: none;
+}
+
+.output.active{ 
+   display: flex;
+}
