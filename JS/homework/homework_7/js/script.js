@@ -1,7 +1,10 @@
 let btn = document.querySelector('#send'),
-   nick = document.querySelector('#nick'),
-   message = document.querySelector('#msg'),
+   nickInp = document.querySelector('#nick'),
+   messageInp = document.querySelector('#msg'),
    messageId;
+
+const wrapper = document.querySelector('.wrapper');
+document.body.style.backgroundColor = 'deepskyblue';
 
 async function jsonPost(url, data) {
    let request = await fetch(url, {
@@ -16,47 +19,51 @@ async function jsonPost(url, data) {
    }
 }
 
-jsonPost("http://students.a-level.com.ua:10012", { func: 'getMessages', messageId })
-   .then(({ data, nextMessageId }) => {
-      const wrapper = document.querySelector('.wrapper');
-      document.body.style.backgroundColor = 'deepskyblue';
 
+async function sendMessages(nick, message){ 
+   this.nick = nickInp.value;
+   this.message = messageInp.value;
+   try{
+      await jsonPost("http://students.a-level.com.ua:10012", {func: 'addMessage', nick:this.nick, message: this.message});
+  } catch (err) {
+      alert(err);
+  }
+}
 
-      console.log(data);
-      console.log(nextMessageId);
-      messageId = nextMessageId;
-      for (let {nick, message} of data) {
-         let elem = document.createElement('div');
-         elem.innerText = `${nick} --- ${message}`;
-         wrapper.prepend(elem);
-      }
-   });
+async function getMessages(url) { 
+   let {data, nextMessageId } = await jsonPost(url, { func: 'getMessages', messageId});
 
+   
+   messageId = nextMessageId;
+   for (let {nick, message} of data) {
+      let elem = document.createElement('div');
+      elem.innerText = `${nick} --- ${message}`;
+      wrapper.prepend(elem);
+   }
+}
 
-const update = () => {
-   setInterval(() => {
-      jsonPost("http://students.a-level.com.ua:10012", { func: 'getMessages', messageId })
-         .then(({ data, nextMessageId }) => {
-            const wrapper = document.querySelector('.wrapper');
-            document.body.style.backgroundColor = 'deepskyblue';
+async function sendAndCheck() { 
+   await sendMessages();
+   await getMessages("http://students.a-level.com.ua:10012");
+}
 
-            messageId = nextMessageId;
-            for (let [key, value] of Object.entries(data)) {
-               let elem = document.createElement('div');
-               elem.innerText = `${value.nick} --- ${value.message}`;
-               wrapper.prepend(elem);
-            }
-         });
-   }, 3 * 1000);
-};
+async function checkLoop(sec) { 
+   while(true){ 
+      const delay = (sec) => new Promise(resolve => setTimeout(resolve, sec*1000));
+      await delay(sec);
+      getMessages("http://students.a-level.com.ua:10012");
 
+   }
+}
+
+getMessages("http://students.a-level.com.ua:10012");
 
 btn.addEventListener('click', () => {
-   if (nick.value && message.value) {
-      jsonPost("http://students.a-level.com.ua:10012", { func: 'addMessage', nick: nick.value, message: message.value })
+   if (nickInp.value && messageInp.value) {
+      sendAndCheck();
    }
-   nick.value = '';
-   message.value = '';
+   nickInp.value = '';
+   messageInp.value = '';
 });
 
-update();
+checkLoop(3);
