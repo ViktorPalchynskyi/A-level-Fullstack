@@ -1,0 +1,50 @@
+body {
+   text-align: center;
+}
+
+
+.trafficlight{ 
+   height: 400px;
+   width: 150px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 100px auto;
+   background-color: grey;
+   border-radius: 18px;
+}
+
+.greenlight, 
+.yellowlight,
+.redlight
+{ 
+   width: 100px;
+   height: 100px;
+   margin-bottom: 20px;
+
+   border-radius:100%;
+   background-color: black;
+}
+
+.greenlight.active{ 
+   background-color: green;
+}
+
+.yellowlight.active{ 
+   background-color: yellow;
+}
+.redlight.active{ 
+   background-color: red;
+}
+
+.btn {
+   height: 50px;
+   width: 150px;
+
+   background-color: deepskyblue;
+   border: 2px solid coral;
+   border-radius: 14px;
+   transition: all 0.5s;
+}
